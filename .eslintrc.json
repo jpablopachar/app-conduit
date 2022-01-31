@@ -34,7 +34,7 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
       }
     },
     {
@@ -52,7 +52,10 @@
       ],
       "extends": [
         "plugin:ngrx/recommended"
-      ]
+      ],
+      "rules": {
+        "ngrx/use-consistent-global-store-name": ["warn", "_store"]
+      }
     }
   ]
 }
