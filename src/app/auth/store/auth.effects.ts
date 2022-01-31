@@ -129,7 +129,7 @@ export class AuthEffect {
     this.redirectAfterSubmit$ = createEffect(
       () => {
         return this._actions$.pipe(
-          ofType(registerSuccessAction),
+          ofType(...[registerSuccessAction, loginSuccessAction]),
           tap((): Promise<boolean> => this._router.navigateByUrl('/'))
         );
       },
