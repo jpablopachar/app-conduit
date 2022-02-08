@@ -12,6 +12,7 @@ import { AuthModule } from './auth/auth.module';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { TopBarModule } from './shared/modules/top-bar/top-bar.module';
 import { PersistanceService } from './shared/services/persistance.service';
+import { ArticleModule } from './article/article.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PersistanceService } from './shared/services/persistance.service';
     StoreRouterConnectingModule.forRoot(),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     AuthModule,
-    TopBarModule
+    TopBarModule,
+    ArticleModule
   ],
   providers: [PersistanceService, {
     provide: HTTP_INTERCEPTORS,
