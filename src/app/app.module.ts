@@ -8,11 +8,12 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ArticleModule } from './article/article.module';
 import { AuthModule } from './auth/auth.module';
+import { SettingsModule } from './settings/settings.module';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { TopBarModule } from './shared/modules/top-bar/top-bar.module';
 import { PersistanceService } from './shared/services/persistance.service';
-import { ArticleModule } from './article/article.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ArticleModule } from './article/article.module';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     AuthModule,
     TopBarModule,
-    ArticleModule
+    ArticleModule,
+    SettingsModule
   ],
   providers: [PersistanceService, {
     provide: HTTP_INTERCEPTORS,

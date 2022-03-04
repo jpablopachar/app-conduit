@@ -78,7 +78,7 @@ export const updateCurrentUserSuccessAction = createAction(
 
 export const updateCurrentUserFailureAction = createAction(
   Types.UPDATE_CURRENT_USER_FAILURE,
-  props<{ errors: CurrentUser }>()
+  props<{ errors: BackendErrors }>()
 );
 
 export const logoutAction = createAction(Types.LOGOUT);
