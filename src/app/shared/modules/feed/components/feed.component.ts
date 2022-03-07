@@ -10,6 +10,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { ParsedUrl, parseUrl, stringify } from 'query-string';
 import { Observable, Subscription } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { GetFeedResponse } from '../models/GetFeedResponse';
 import { getFeedAction } from '../store/feed.actions';
 import {
@@ -82,7 +83,7 @@ export class FeedComponent implements OnChanges, OnInit, OnDestroy {
     private readonly _router: Router,
     private readonly _route: ActivatedRoute
   ) {
-    this.limit = 0;
+    this.limit = environment.limit;
     this.baseUrl = '';
     this.currentPage = 0;
   }
