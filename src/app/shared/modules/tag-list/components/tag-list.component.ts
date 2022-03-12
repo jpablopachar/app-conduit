@@ -5,7 +5,7 @@ import { PopularTag } from 'src/app/shared/models/PopularTag';
   selector: 'app-tag-list',
   template: `
     <ul class="tag-list">
-      <li *ngFor="let tag of tags" class="tag-default tag-pill tag-outline">
+      <li *ngFor="let tag of tags" class="tag-default tag-pill tag-outline tag">
         {{ tag }}
       </li>
     </ul>
